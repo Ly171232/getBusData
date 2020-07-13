@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ly.test.com.mapper.BusDataMapper">
+    <insert id="saveData" parameterType="ly.test.com.pojo.GongJiao">
+        insert into gongjiao (name,Lat,Lng,line,namese,time,company) values
+        <foreach collection="list" item="gongjiao" index="index" separator=",">
+            (
+            #{gongjiao.name},
+            #{gongjiao.Lat},
+            #{gongjiao.Lng},
+            #{gongjiao.line},
+            #{gongjiao.namese},
+            #{gongjiao.time},
+            #{gongjiao.company}
+            )
+        </foreach>
+    </insert>
+    <select id="getBus" resultType="java.lang.String">
+        select * from luxian;
+    </select>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ly.test.com.mapper.JsonParseMapper">
+    <select id="getData" resultType="ly.test.com.pojo.Details">
+
+    </select>
+    <select id="getStreetData" resultType="ly.test.com.pojo.Street">
+        select * from street
+    </select>
+    <select id="getMatterData" resultType="ly.test.com.pojo.Matter">
+        select * from matter
+    </select>
+    <select id="getMatterDetailsData" resultType="ly.test.com.pojo.MatterDetails">
+        select * from matter_details
+    </select>
+    <select id="getStreetName" resultType="java.lang.String">
+        select distinct streetName from street
+    </select>
+</mapper>

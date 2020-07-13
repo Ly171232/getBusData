@@ -1,0 +1,20 @@
+server:
+  port: 8083
+  tomcat:
+    maxHttpHeaderSize: 10240000
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .html
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/mytest?characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath*:ly.test.com.mapper/*.xml
+  type-aliases-package: ly.test.com.pojo
+  configuration:
+    map-underscore-to-camel-case: true
